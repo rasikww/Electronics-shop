@@ -12,8 +12,6 @@ function createProduct() {
             description: txtDesc,
             price: txtPrice,
         };
-        console.log(product);
-
         return product;
     }
 }

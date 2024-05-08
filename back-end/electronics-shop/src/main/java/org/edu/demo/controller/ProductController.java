@@ -32,4 +32,9 @@ public class ProductController {
     Product retrieve(@PathVariable Integer id){
         return productService.retrieve(id);
     }
+    @PatchMapping("/product/{id}")
+    Product update(@PathVariable Integer id, @RequestBody Product product){
+        return productService.update(id, product);
+    }
+
 }

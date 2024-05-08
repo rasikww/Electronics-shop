@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
 }
-#btnAdd {
+#btn-add {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-weight: bold;
     padding-left: 6%;
@@ -41,4 +41,12 @@ body {
 }
 #search-card {
     background-color: #bde2da;
+}
+#img-gadgets {
+    min-width: 60%;
+    border-radius: 3%;
+}
+#para {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
 }

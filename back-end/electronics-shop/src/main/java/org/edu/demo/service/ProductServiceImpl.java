@@ -54,4 +54,24 @@ public class ProductServiceImpl implements ProductService{
     public Product retrieve(Integer id){
         return mapper.convertValue(repository.findById(id),Product.class);
     }
+
+    public Product update(Integer id, Product product) {
+        Optional<ProductEntity> optional = repository.findById(id);
+        if (optional.isPresent()){
+            ProductEntity productEntity = optional.get();
+            if (!product.getName().isEmpty()) {
+                productEntity.setName(product.getName());
+            }
+            if (!product.getDescription().isEmpty()) {
+                productEntity.setDescription(product.getDescription());
+            }
+            if (product.getPrice() != null ) {
+                productEntity.setPrice(product.getPrice());
+            }
+            productEntity.setActive(true);
+            repository.save(productEntity);
+            return mapper.convertValue(optional.get(), Product.class);
+        }
+        return null;
+    }
 }

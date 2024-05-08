@@ -13,4 +13,6 @@ public interface ProductService {
     public Product softDelete(Integer id);
 
     public Product retrieve(Integer id);
+
+    public Product update(Integer id, Product product);
 }
